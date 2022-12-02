@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,12 +13,15 @@ public class Main {
         ArrayList<Integer> evenNumbers = new ArrayList<>();
         ArrayList<Integer> oddNumbers = new ArrayList<>();
 
-        for (int i = 1; i <= 100; i++) {
-            numbers.add(i);
-            if (i % 2 == 0) {
-                evenNumbers.add(i);
+        Random random = new Random();
+
+        for (int i = 1; i <= 50; i++) {
+            int number = random.nextInt(1,100);
+            numbers.add(number);
+            if (number % 2 == 0) {
+                evenNumbers.add(number);
             }else {
-                oddNumbers.add(i);
+                oddNumbers.add(number);
             }
         }
 
